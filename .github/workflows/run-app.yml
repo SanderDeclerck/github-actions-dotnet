@@ -1,13 +1,17 @@
 name: Run the console app
 on: push
 jobs:
-  build:
-    name: Build the console app
+  run:
+    name: Run the console app
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
     - name: Setup dotnet
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '2.2.103'
-    - run: dotnet build ./src/Actions.Console/Actions.Console.csproj
+    - name: Checkout the console app
+      uses: actions/checkout@master
+    - name: Build the console app
+      run: dotnet build ./src/Actions.Console/Actions.Console.csproj
+    - name: Run the console app
+      run: dotnet ./src/Actions.Console/bin/Debug/netcoreapp2.2/Actions.Console.dll
