@@ -12,4 +12,4 @@ jobs:
     - name: Checkout the repository
       uses: actions/checkout@master
     - name: Run the unit tests
-      run: dotnet test ./src/Actions.Console/Actions.Console.csproj
+      run: dotnet test ./tst/Actions.UnitTest/Actions.UnitTest.csproj
