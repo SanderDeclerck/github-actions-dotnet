@@ -6,9 +6,15 @@ namespace Actions.UnitTest
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void Success()
         {
             Assert.True(true);
+        }
+
+        [Fact]
+        public void Fail()
+        {
+            Assert.True(false);
         }
     }
 }
