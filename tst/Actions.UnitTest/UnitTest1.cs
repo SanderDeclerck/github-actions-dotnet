@@ -10,12 +10,6 @@ namespace Actions.UnitTest
         {
             Assert.True(true);
         }
-
-        [Fact]
-        public void Fail()
-        {
-            Assert.True(false);
-        }
         
     }
 }
